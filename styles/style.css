@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(43, 86, 226);
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.container {
+    width: 1170px;
+    margin: 5rem auto;
+    background-color: rgb(95, 99, 112);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cardMovie {
+    width: calc((100% / 4) - 3rem);
+    margin: 2rem 1.5rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.genreTitle {
+    margin-top: 2rem;
+}
