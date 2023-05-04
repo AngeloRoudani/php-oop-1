@@ -2,10 +2,7 @@
 
 require __DIR__ . '/Models/movie.php';
 require __DIR__ . '/Models/genres.php';
-
-$starGenre = new Genres('Fantascienza', 'Politico','Per il Cinema');
-$starWars = new Movie('Star Wars', $starGenre, 'LucasFilms', '1985', 'USA', '4.8', 'English' );
-
+require __DIR__ . '/Models/dataMovie.php';
 
 
 ?>
@@ -19,12 +16,19 @@ $starWars = new Movie('Star Wars', $starGenre, 'LucasFilms', '1985', 'USA', '4.8
     <title>OOP</title>
 </head>
 <body>
-    <?php
-        echo $starWars->getMovieInfo();
-    ?>
-    <h3>Genere</h3>
-    <?php
-        echo $starWars->getGenreInfo();
-    ?>
+    <div class="container">
+                <?php foreach($movieList as $movie) { ?>
+                    <div class="cardMovie">
+                        <?php
+                            echo $movie[0]->getMovieInfo();
+                        ?>
+                        <h3>Genere</h3>
+                        <?php
+                            echo $movie[1]->getGenreInfo();
+                        ?>
+                    </div>
+                <?php } ?>
+        </div>
+    </div>
 </body>
 </html>
