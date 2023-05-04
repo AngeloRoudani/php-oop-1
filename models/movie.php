@@ -10,7 +10,7 @@ class Movie {
     public $originalLanguage;
 
 
-    public function __construct($title, $genre, $productionHouse, $productionCountry, $releaseDate, $vote, $originalLanguage ) {
+    public function __construct($title, Genres $genre, $productionHouse, $productionCountry, $releaseDate, $vote, $originalLanguage ) {
         
         $this->title = $title;
         $this->genre = $genre;
@@ -24,12 +24,17 @@ class Movie {
 
     public function getMovieInfo() {
         return '<h1>'. $this->title . '</h1>
-                <div>'. $this->genre . '</div>
                 <div>'. $this->productionHouse . '</div>
                 <div>'. $this->productionCountry . '</div>
                 <div>'. $this->releaseDate . '</div>
                 <div>'. $this->vote . '</div>
                 <div>'. $this->originalLanguage . '</div>';
+    }
+
+    public function getGenreInfo() {
+        return '<div>'. $this->genre?->genreName . '</div>
+                <div>'. $this->genre?->subgenre . '</div>
+                <div>'. $this->genre?->destination . '</div>';
     }
 
 }

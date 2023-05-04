@@ -5,7 +5,7 @@ class Genres {
     public $subgenre;
     public $destination;
 
-    public function __construct($genreName, $subgenre, $destination ) {
+    public function __construct(String $genreName,String $subgenre,String $destination ) {
         
         $this->genreName = $genreName;
         $this->subgenre = $subgenre;

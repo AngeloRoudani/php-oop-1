@@ -1,8 +1,11 @@
 <?php
 
 require __DIR__ . '/Models/movie.php';
+require __DIR__ . '/Models/genres.php';
 
-$starWars = new Movie('Star Wars', 'Fantascienza', 'LucasFilms', '1985', 'USA', '4.8', 'English' );
+$starGenre = new Genres('Fantascienza', 'Politico','Per il Cinema');
+$starWars = new Movie('Star Wars', $starGenre, 'LucasFilms', '1985', 'USA', '4.8', 'English' );
+
 
 
 ?>
@@ -18,6 +21,10 @@ $starWars = new Movie('Star Wars', 'Fantascienza', 'LucasFilms', '1985', 'USA', 
 <body>
     <?php
         echo $starWars->getMovieInfo();
+    ?>
+    <h3>Genere</h3>
+    <?php
+        echo $starWars->getGenreInfo();
     ?>
 </body>
 </html>
