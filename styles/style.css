@@ -15,6 +15,7 @@ body {
     width: 1170px;
     margin: 5rem auto;
     background-color: rgb(95, 99, 112);
+    opacity: 70%;
     display: flex;
     flex-wrap: wrap;
     border-radius: 1rem;
@@ -27,6 +28,7 @@ body {
     color: white;
     text-align: center;
     border-radius: 0.5rem;
+    opacity: 100%;
 }
 
 .genreTitle {
