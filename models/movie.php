@@ -23,7 +23,13 @@ class Movie {
     }
 
     public function getMovieInfo() {
-        return '<h1>'. $this->title . '<h1>';
+        return '<h1>'. $this->title . '</h1>
+                <div>'. $this->genre . '</div>
+                <div>'. $this->productionHouse . '</div>
+                <div>'. $this->productionCountry . '</div>
+                <div>'. $this->releaseDate . '</div>
+                <div>'. $this->vote . '</div>
+                <div>'. $this->originalLanguage . '</div>';
     }
 
 }
